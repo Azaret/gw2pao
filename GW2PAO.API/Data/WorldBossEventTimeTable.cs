@@ -196,6 +196,33 @@ namespace GW2PAO.API.Data
                     CompletionLocations = new List<Point>() { new Point(390.7, 345.2, 71.9) },
                     CompletionRadius = 50
                 };
+            var gendarranFieldsLeyLineAnomaly = new WorldBossEvent()
+                {
+                    Name = "Gendarran Fields Ley-Line Anomaly",
+                    ID = WorldBossID.GendarranFieldsLeyLineAnomaly,
+                    MapID = 24,
+                    WaypointCode = "[&BO0AAAA=]",
+                    CompletionLocations = new List<Point>() { new Point(390.7, 345.2, 71.9) }, // FIXME Gather lay-line path points
+                    CompletionRadius = 50
+                };
+            var timberlineFallsLeyLineAnomaly = new WorldBossEvent()
+                {
+                    Name = "Timberline Falls Ley-Line Anomaly",
+                    ID = WorldBossID.TimberlineFallsLeyLineAnomaly,
+                    MapID = 29,
+                    WaypointCode = "[&BEwCAAA=]",
+                    CompletionLocations = new List<Point>() { new Point(390.7, 345.2, 71.9) }, // FIXME Gather lay-line path points
+                    CompletionRadius = 50
+                };
+            var ironMarchesLeyLineAnomaly = new WorldBossEvent()
+                {
+                    Name = "Iron Marches Ley-Line Anomaly",
+                    ID = WorldBossID.IronMarchesLeyLineAnomaly,
+                    MapID = 25,
+                    WaypointCode = "[&BOYBAAA=]",
+                    CompletionLocations = new List<Point>() { new Point(390.7, 345.2, 71.9) }, // FIXME Gather lay-line path points
+                    CompletionRadius = 50
+                };
 
             if (adjustedTimes)
             {
@@ -250,6 +277,18 @@ namespace GW2PAO.API.Data
                 frozenMaw.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(0, 17, 0), new SerializableTimespan(2, 17, 0), new SerializableTimespan(4, 17, 0), new SerializableTimespan(6, 17, 0), new SerializableTimespan(8, 17, 0), new SerializableTimespan(10, 17, 0), new SerializableTimespan(12, 17, 0), new SerializableTimespan(14, 17, 0), new SerializableTimespan(16, 17, 0), new SerializableTimespan(18, 17, 0), new SerializableTimespan(20, 17, 0), new SerializableTimespan(22, 17, 0) };
                 frozenMaw.Duration = new SerializableTimespan(0, 3, 30);
                 frozenMaw.WarmupDuration = new SerializableTimespan(0, 2, 0);
+
+                gendarranFieldsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(0, 20, 0), new SerializableTimespan(6, 20, 0), new SerializableTimespan(12, 20, 0), new SerializableTimespan(18, 20, 0) };
+                gendarranFieldsLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
+                gendarranFieldsLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
+
+                timberlineFallsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(2, 20, 0), new SerializableTimespan(8, 20, 0), new SerializableTimespan(14, 20, 0), new SerializableTimespan(20, 20, 0) };
+                timberlineFallsLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
+                timberlineFallsLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
+
+                ironMarchesLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(4, 20, 0), new SerializableTimespan(10, 20, 0), new SerializableTimespan(16, 20, 0), new SerializableTimespan(22, 20, 0) };
+                ironMarchesLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
+                ironMarchesLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
                 filename = AdjustedFilename;
             }
@@ -307,6 +346,18 @@ namespace GW2PAO.API.Data
                 frozenMaw.Duration = new SerializableTimespan(0, 5, 0);
                 frozenMaw.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
+                gendarranFieldsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(0, 20, 0), new SerializableTimespan(6, 20, 0), new SerializableTimespan(12, 20, 0), new SerializableTimespan(18, 20, 0) };
+                gendarranFieldsLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
+                gendarranFieldsLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
+
+                timberlineFallsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(2, 20, 0), new SerializableTimespan(8, 20, 0), new SerializableTimespan(14, 20, 0), new SerializableTimespan(20, 20, 0) };
+                timberlineFallsLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
+                timberlineFallsLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
+
+                ironMarchesLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(4, 20, 0), new SerializableTimespan(10, 20, 0), new SerializableTimespan(16, 20, 0), new SerializableTimespan(22, 20, 0) };
+                ironMarchesLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
+                ironMarchesLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
+
                 filename = StandardFilename;
             }
 
@@ -323,6 +374,9 @@ namespace GW2PAO.API.Data
             tt.WorldEvents.Add(shadowBehemoth);
             tt.WorldEvents.Add(fireElemental);
             tt.WorldEvents.Add(frozenMaw);
+            tt.WorldEvents.Add(gendarranFieldsLeyLineAnomaly);
+            tt.WorldEvents.Add(timberlineFallsLeyLineAnomaly);
+            tt.WorldEvents.Add(ironMarchesLeyLineAnomaly);
 
             XmlSerializer serializer = new XmlSerializer(typeof(WorldBossEventTimeTable));
             TextWriter textWriter = new StreamWriter(filename);

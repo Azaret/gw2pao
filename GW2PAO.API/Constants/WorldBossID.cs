@@ -24,5 +24,8 @@ namespace GW2PAO.API.Constants
         public static readonly Guid ShadowBehemoth = new Guid("31CEBA08-E44D-472F-81B0-7143D73797F5");
         public static readonly Guid FireElemental = new Guid("33F76E9E-0BB6-46D0-A3A9-BE4CDFC4A3A4");
         public static readonly Guid FrozenMaw = new Guid("F7D9D427-5E54-4F12-977A-9809B23FBA99");
+        public static readonly Guid GendarranFieldsLeyLineAnomaly = new Guid("7418C0EB-BFFE-4899-871C-C63540502C8D");
+        public static readonly Guid TimberlineFallsLeyLineAnomaly = new Guid("E36B80D5-7373-4336-8954-86F886C9725D");
+        public static readonly Guid IronMarchesLeyLineAnomaly = new Guid("6B0265A6-0085-4268-981E-1B91005E5995");
     }
 }
