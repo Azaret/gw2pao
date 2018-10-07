@@ -278,15 +278,15 @@ namespace GW2PAO.API.Data
                 frozenMaw.Duration = new SerializableTimespan(0, 3, 30);
                 frozenMaw.WarmupDuration = new SerializableTimespan(0, 2, 0);
 
-                gendarranFieldsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(0, 20, 0), new SerializableTimespan(6, 20, 0), new SerializableTimespan(12, 20, 0), new SerializableTimespan(18, 20, 0) };
+                gendarranFieldsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(4, 20, 0), new SerializableTimespan(10, 20, 0), new SerializableTimespan(16, 20, 0), new SerializableTimespan(22, 20, 0) };
                 gendarranFieldsLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
                 gendarranFieldsLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
-                timberlineFallsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(2, 20, 0), new SerializableTimespan(8, 20, 0), new SerializableTimespan(14, 20, 0), new SerializableTimespan(20, 20, 0) };
+                timberlineFallsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(0, 20, 0), new SerializableTimespan(6, 20, 0), new SerializableTimespan(12, 20, 0), new SerializableTimespan(18, 20, 0) };
                 timberlineFallsLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
                 timberlineFallsLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
-                ironMarchesLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(4, 20, 0), new SerializableTimespan(10, 20, 0), new SerializableTimespan(16, 20, 0), new SerializableTimespan(22, 20, 0) };
+                ironMarchesLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(2, 20, 0), new SerializableTimespan(8, 20, 0), new SerializableTimespan(14, 20, 0), new SerializableTimespan(20, 20, 0) };
                 ironMarchesLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
                 ironMarchesLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
@@ -346,15 +346,15 @@ namespace GW2PAO.API.Data
                 frozenMaw.Duration = new SerializableTimespan(0, 5, 0);
                 frozenMaw.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
-                gendarranFieldsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(0, 20, 0), new SerializableTimespan(6, 20, 0), new SerializableTimespan(12, 20, 0), new SerializableTimespan(18, 20, 0) };
+                gendarranFieldsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(4, 20, 0), new SerializableTimespan(10, 20, 0), new SerializableTimespan(16, 20, 0), new SerializableTimespan(22, 20, 0) };
                 gendarranFieldsLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
                 gendarranFieldsLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
-                timberlineFallsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(2, 20, 0), new SerializableTimespan(8, 20, 0), new SerializableTimespan(14, 20, 0), new SerializableTimespan(20, 20, 0) };
+                timberlineFallsLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(0, 20, 0), new SerializableTimespan(6, 20, 0), new SerializableTimespan(12, 20, 0), new SerializableTimespan(18, 20, 0) };
                 timberlineFallsLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
                 timberlineFallsLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
-                ironMarchesLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(4, 20, 0), new SerializableTimespan(10, 20, 0), new SerializableTimespan(16, 20, 0), new SerializableTimespan(22, 20, 0) };
+                ironMarchesLeyLineAnomaly.ActiveTimes = new List<SerializableTimespan>() { new SerializableTimespan(2, 20, 0), new SerializableTimespan(8, 20, 0), new SerializableTimespan(14, 20, 0), new SerializableTimespan(20, 20, 0) };
                 ironMarchesLeyLineAnomaly.Duration = new SerializableTimespan(0, 15, 0);
                 ironMarchesLeyLineAnomaly.WarmupDuration = new SerializableTimespan(0, 0, 0);
 
