@@ -134,6 +134,85 @@ namespace GW2PAO.API.Data
                 }
             });
 
+            met.MetaEvents.Add(new MetaEvent()
+            {
+                Name = "Lake Doric",
+                ID = MetaEventID.LakeDoric,
+                MapID = 1185,
+                StartOffset = new SerializableTimespan(0, 30, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { ID = MetaEventStageID.LakeDoric_NoransHomestead, Name = "Noran's Homestead", Duration = new SerializableTimespan(0, 30, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.LakeDoric_SaidrasHaven, Name = "Saidra's Haven", Duration = new SerializableTimespan(0, 45, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.LakeDoric_NewLoamhurst, Name = "New Loamhurst", Duration = new SerializableTimespan(0, 45, 0) }
+                }
+            });
+
+            met.MetaEvents.Add(new MetaEvent()
+            {
+                Name = "Crystal Oasis",
+                ID = MetaEventID.CrystalOasis,
+                MapID = 1210,
+                StartOffset = new SerializableTimespan(0, 5, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz, Name = "Casino Blitz", Duration = new SerializableTimespan(0, 25, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.Inactive, Name = "", Duration = new SerializableTimespan(1, 35, 0) }
+                }
+            });
+
+            met.MetaEvents.Add(new MetaEvent()
+            {
+                Name = "Desert Highlands",
+                ID = MetaEventID.DesertHighlands,
+                MapID = 1211,
+                StartOffset = new SerializableTimespan(1, 0, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { ID = MetaEventStageID.DesertHighlands_BuriedTreasure, Name = "Buried Treasure", Duration = new SerializableTimespan(0, 20, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.Inactive, Name = "", Duration = new SerializableTimespan(1, 40, 0) }
+                }
+            });
+
+            met.MetaEvents.Add(new MetaEvent()
+            {
+                Name = "Domain of Vabbi",
+                ID = MetaEventID.DomainOfVabbi,
+                MapID = 1248,
+                StartOffset = new SerializableTimespan(0, 0, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { ID = MetaEventStageID.DomainOfVabbi_SerpentsIre, Name = "Serpents' Ire", Duration = new SerializableTimespan(0, 30, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.Inactive, Name = "", Duration = new SerializableTimespan(1, 0, 0) }
+                }
+            });
+
+            met.MetaEvents.Add(new MetaEvent()
+            {
+                Name = "Domain of Istan",
+                ID = MetaEventID.DomainOfIstan,
+                MapID = 1263,
+                StartOffset = new SerializableTimespan(1, 45, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { ID = MetaEventStageID.DomainOfIstan_Palawadan, Name = "Palawadan", Duration = new SerializableTimespan(0, 30, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.Inactive, Name = "", Duration = new SerializableTimespan(1, 30, 0) }
+                }
+            });
+
+            met.MetaEvents.Add(new MetaEvent()
+            {
+                Name = "Jahai Bluffs",
+                ID = MetaEventID.JahaiBluffs,
+                MapID = 1301,
+                StartOffset = new SerializableTimespan(1, 0, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey, Name = "Dangerous Prey", Duration = new SerializableTimespan(0, 30, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.Inactive, Name = "", Duration = new SerializableTimespan(1, 30, 0) }
+                }
+            });
+
             XmlSerializer serializer = new XmlSerializer(typeof(MetaEventsTable));
             TextWriter textWriter = new StreamWriter(MetaEventsTable.Filename);
             serializer.Serialize(textWriter, met);
