@@ -15,7 +15,7 @@
         d:DesignHeight="200"
         Top="{Binding Source={x:Static properties:Settings.Default}, Path=MetaEventTimersY}"
         Left="{Binding Source={x:Static properties:Settings.Default}, Path=MetaEventTimersX}"
-        MinWidth="150" MaxWidth="350" Width="{Binding Source={x:Static properties:Settings.Default}, Path=MetaEventTimersWidth}"
+        MinWidth="150" MaxWidth="500" Width="{Binding Source={x:Static properties:Settings.Default}, Path=MetaEventTimersWidth}"
         WindowStyle="None" AllowsTransparency="true" Background="Transparent"
         ResizeMode="NoResize"
         Topmost="True"
