@@ -5,6 +5,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using GW2PAO.API.Constants;
 using GW2PAO.API.Services.Interfaces;
 using GW2PAO.API.Util;
 using GW2PAO.Modules.Events.Interfaces;
@@ -421,20 +422,23 @@ namespace GW2PAO.Modules.Events
                     // Refresh the timer and stages for the event
                     metaEvent.Update(DateTime.UtcNow.TimeOfDay);
 
-                    // Check to see if we need to display a notification for this event
-                    var ens = this.UserData.NotificationSettings.FirstOrDefault(ns => ns.EventID == metaEvent.EventId);
-                    if (ens != null)
+                    if (metaEvent.NextStage.ID != MetaEventStageID.Inactive)
                     {
-                        if (ens.IsNotificationEnabled
-                            && metaEvent.TimeUntilNextStage.CompareTo(ens.NotificationInterval) < 0)
+                        // Check to see if we need to display a notification for this event
+                        var ens = this.UserData.NotificationSettings.FirstOrDefault(ns => ns.EventID == metaEvent.EventId);
+                        if (ens != null)
                         {
-                            var notification = new MetaEventNotificationViewModel(metaEvent, this.EventNotifications);
-                            this.DisplayEventNotification(notification, this.EventNotifications);
-                            this.armedEventNotifications[metaEvent.EventId] = false;
-                        }
-                        else
-                        {
-                            this.armedEventNotifications[metaEvent.EventId] = true;
+                            if (ens.IsNotificationEnabled
+                                && metaEvent.TimeUntilNextStage.CompareTo(ens.NotificationInterval) < 0)
+                            {
+                                var notification = new MetaEventNotificationViewModel(metaEvent, this.EventNotifications);
+                                this.DisplayEventNotification(notification, this.EventNotifications);
+                                this.armedEventNotifications[metaEvent.EventId] = false;
+                            }
+                            else
+                            {
+                                this.armedEventNotifications[metaEvent.EventId] = true;
+                            }
                         }
                     }
                 }
