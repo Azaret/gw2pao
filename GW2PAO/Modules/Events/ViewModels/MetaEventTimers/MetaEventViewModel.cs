@@ -24,6 +24,7 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         private EventState state;
         private MetaEvent metaEventData;
         private string mapName;
+        private string label;
         private MetaEventStage currentStage;
         private MetaEventStage nextStage;
         private TimeSpan prevUpdateTimeUtc;
@@ -54,6 +55,15 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         {
             get { return this.state; }
             set { if (SetProperty(ref this.state, value)) this.RefreshVisibility(); }
+        }
+
+        /// <summary>
+        /// Display label used to aggregate map name and current stage name
+        /// </summary>
+        public string Label
+        {
+            get { return this.mapName + this.label; }
+            set { if (SetProperty(ref this.label, value)) this.RefreshVisibility(); }
         }
 
         /// <summary>
@@ -239,10 +249,12 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
             if (this.CurrentStage.ID == MetaEventStageID.Inactive)
             {
                 this.State = EventState.Inactive;
+                this.Label = "";
             }
             else
             {
                 this.State = EventState.Active;
+                this.Label = ": " + this.CurrentStage.Name;
             }
         }
 

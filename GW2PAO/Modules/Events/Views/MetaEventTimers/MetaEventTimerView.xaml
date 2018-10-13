@@ -86,7 +86,7 @@
                                     HorizontalAlignment="Left"
                                     Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                     FontSize="13"
-                                    Text="{Binding MapName}" />
+                                    Text="{Binding Label}" />
 
             <StackPanel Orientation="Horizontal"
                         Grid.Row="0"
