@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GW2PAO.API.Constants;
 using GW2PAO.API.Data.Entities;
 using GW2PAO.API.Data.Enums;
 using GW2PAO.PresentationCore;
@@ -20,6 +21,7 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
+        private EventState state;
         private MetaEvent metaEventData;
         private string mapName;
         private MetaEventStage currentStage;
@@ -43,6 +45,15 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         public int MapID
         {
             get { return this.metaEventData.MapID; }
+        }
+
+        /// <summary>
+        /// Current state of the event
+        /// </summary>
+        public EventState State
+        {
+            get { return this.state; }
+            set { if (SetProperty(ref this.state, value)) this.RefreshVisibility(); }
         }
 
         /// <summary>
@@ -120,6 +131,7 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
             this.metaEventData = metaEventData;
             this.UserData = userData;
             this.IsVisible = true;
+            this.state = EventState.Unknown;
 
             var currentTime = DateTime.UtcNow.TimeOfDay;
             this.InitializeStagesAndTimers(currentTime);
@@ -159,6 +171,7 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
 
                     this.TimeSinceStageStarted = TimeSpan.Zero;
                     this.TimeUntilNextStage = this.CurrentStage.Duration.Time;
+                    this.SetState();
 
                     logger.Info("New stage for meta event {0} - Current Stage: {1} - Next Stage: {2} - Next stage in {3}",
                         this.metaEventData.Name, this.CurrentStage.Name, this.NextStage.Name, this.TimeUntilNextStage);
@@ -215,8 +228,22 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
                 this.TimeSinceStageStarted = currentTime.Subtract(nextStageStartTime.Subtract(this.CurrentStage.Duration.Time));
             }
 
+            this.SetState();
+
             logger.Info("Meta Event {0} - Current Stage: {1} - Next Stage: {2} - Next stage in {3}",
                 this.metaEventData.Name, this.CurrentStage.Name, this.NextStage.Name, this.TimeUntilNextStage);
+        }
+
+        private void SetState()
+        {
+            if (this.CurrentStage.ID == MetaEventStageID.Inactive)
+            {
+                this.State = EventState.Inactive;
+            }
+            else
+            {
+                this.State = EventState.Active;
+            }
         }
 
         /// <summary>

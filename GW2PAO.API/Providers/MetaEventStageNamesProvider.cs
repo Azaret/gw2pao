@@ -123,7 +123,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_Preparation,  Name = "Preparation" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_ChakGerent,   Name = "Chak Gerent" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_HelpOutposts, Name = "Help Outposts" },
-                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Map Active" }
+                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Map Active" },
+                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                   Name = "ends" }
             };
 
             // Spanish
@@ -141,7 +142,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_Preparation,  Name = "Preparación" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_ChakGerent,   Name = "Chak Gerent" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_HelpOutposts, Name = "Ayuda Outposts" },
-                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "mapa activo" }
+                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "mapa activo" },
+                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                   Name = "ends" }
             };
 
             // French
@@ -159,7 +161,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_Preparation,  Name = "Préparation" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_ChakGerent,   Name = "Régent Chak" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_HelpOutposts, Name = "Aider les campements" },
-                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Carte active" }
+                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Carte active" },
+                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                   Name = "ends" }
             };
 
             // German
@@ -177,7 +180,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_Preparation,  Name = "Vorbereitung" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_ChakGerent,   Name = "Chak Gerent" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_HelpOutposts, Name = "Hilfe Outposts" },
-                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Karte Aktiv" }
+                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Karte Aktiv" },
+                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                   Name = "ends" }
             };
 
             Serialization.SerializeToXml(english, this.GetFilePath("en"));

@@ -17,6 +17,7 @@ namespace GW2PAO.API.Constants
 
     public class MetaEventStageID
     {
+        public static readonly Guid Inactive = new Guid("713AE965-354E-4C82-B0CC-AACBE9EBCDDE");
         public static readonly Guid DryTop_CrashSite = new Guid("03E26C95-D7B6-4333-993C-1B2C1BB1CE10");
         public static readonly Guid DryTop_Sandstorm = new Guid("1C351A1B-3752-4758-B0C9-CAD397DAC3F8");
         public static readonly Guid VerdantBrink_NightBosses = new Guid("0C198B36-80D4-415D-836C-BFE02E6A1087");

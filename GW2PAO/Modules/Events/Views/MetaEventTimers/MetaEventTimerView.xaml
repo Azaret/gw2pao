@@ -84,7 +84,7 @@
                                     Grid.Column="0"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
-                                    Fill="White"
+                                    Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                     FontSize="13"
                                     Text="{Binding MapName}" />
 
@@ -95,12 +95,12 @@
                         Margin="0,0,5,0">
                 <core:OutlinedTextBlock Name="EventName"
                                         VerticalAlignment="Center"
-                                        Fill="White"
+                                        Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                         FontSize="13"
                                         Text="{Binding NextStage.Name}" />
                 <core:OutlinedTextBlock Margin="3,0,0,0"
                                         VerticalAlignment="Center"
-                                        Fill="White"
+                                        Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                         FontSize="13"
                                         Text="{x:Static resx:Resources.In}" />
             </StackPanel>
@@ -110,7 +110,7 @@
                                     Grid.Column="2"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Right"
-                                    Fill="White"
+                                    Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                     FontSize="13"
                                     Text="{Binding TimeUntilNextStage, Converter={StaticResource TimeConverter}}" />
         </Grid>
