@@ -132,7 +132,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_SerpentsIre,      Name = "Serpents' Ire" },
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,        Name = "Palawadan" },
                 new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,      Name = "Dangerous Prey" },
-                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                       Name = "ends" }
+                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                       Name = "ends" },
+                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                      Name = "Ley-Line Anomaly" }
             };
 
             // Spanish
@@ -159,7 +160,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_SerpentsIre,      Name = "Serpents' Ire" },
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,        Name = "Palawadan" },
                 new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,      Name = "Dangerous Prey" },
-                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                       Name = "ends" }
+                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                       Name = "ends" },
+                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                      Name = "Ley-Line Anomaly" }
             };
 
             // French
@@ -186,7 +188,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_SerpentsIre,      Name = "Serpents' Ire" },
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,        Name = "Palawadan" },
                 new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,      Name = "Proie dangereuse" },
-                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                       Name = "ends" }
+                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                       Name = "ends" },
+                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                      Name = "Ley-Line Anomaly" }
             };
 
             // German
@@ -213,7 +216,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_SerpentsIre,      Name = "Serpents' Ire" },
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,        Name = "Palawadan" },
                 new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,      Name = "Dangerous Prey" },
-                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                       Name = "ends" }
+                new MetaEventStageName() { ID = MetaEventStageID.Inactive,                       Name = "ends" },
+                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                      Name = "Ley-Line Anomaly" }
             };
 
             Serialization.SerializeToXml(english, this.GetFilePath("en"));

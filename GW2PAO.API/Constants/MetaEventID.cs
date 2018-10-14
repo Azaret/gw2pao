@@ -19,6 +19,7 @@ namespace GW2PAO.API.Constants
         public static readonly Guid DomainOfVabbi = new Guid("CACE6C6E-9BFA-4A51-9307-1B17B0F515B1");
         public static readonly Guid DomainOfIstan = new Guid("6658D3D5-87F7-4A1F-8A09-5399667A72A3");
         public static readonly Guid JahaiBluffs = new Guid("A7DCAFB8-218E-4094-9B00-89BD31EA8602");
+        public static readonly Guid LeyLineAnomaly = new Guid("644757FB-DE98-4798-B48E-3F273480DE49");
     }
 
     public class MetaEventStageID
@@ -45,5 +46,8 @@ namespace GW2PAO.API.Constants
         public static readonly Guid DomainOfVabbi_SerpentsIre = new Guid("94B42DDA-FA09-4BA5-830C-526B9B7813BE");
         public static readonly Guid DomainOfIstan_Palawadan = new Guid("E68AA03E-C11D-4EC1-BD79-0D0880D4CF9E");
         public static readonly Guid JahaiBluffs_DangerousPrey = new Guid("A9EC79C9-809C-4BE2-BBBA-80CD1A067D75");
+        public static readonly Guid LeyLineAnomaly_GendarranFields = new Guid("7418C0EB-BFFE-4899-871C-C63540502C8D");
+        public static readonly Guid LeyLineAnomaly_TimberlineFalls = new Guid("E36B80D5-7373-4336-8954-86F886C9725D");
+        public static readonly Guid LeyLineAnomaly_IronMarches = new Guid("6B0265A6-0085-4268-981E-1B91005E5995");
     }
 }
