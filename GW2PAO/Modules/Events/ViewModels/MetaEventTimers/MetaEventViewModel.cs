@@ -24,7 +24,8 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         private EventState state;
         private MetaEvent metaEventData;
         private string mapName;
-        private string label;
+        private string currentStageLabel;
+        private string nextStageLabel;
         private MetaEventStage currentStage;
         private MetaEventStage nextStage;
         private TimeSpan prevUpdateTimeUtc;
@@ -60,10 +61,19 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         /// <summary>
         /// Display label used to aggregate map name and current stage name
         /// </summary>
-        public string Label
+        public string CurrentStageLabel
         {
-            get { return this.mapName + this.label; }
-            set { if (SetProperty(ref this.label, value)) this.RefreshVisibility(); }
+            get { return this.currentStageLabel; }
+            set { if (SetProperty(ref this.currentStageLabel, value)) this.RefreshVisibility(); }
+        }
+
+        /// <summary>
+        /// Display label used to aggregate map name and current stage name
+        /// </summary>
+        public string NextStageLabel
+        {
+            get { return this.nextStageLabel; }
+            set { if (SetProperty(ref this.nextStageLabel, value)) this.RefreshVisibility(); }
         }
 
         /// <summary>
@@ -246,16 +256,50 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
 
         private void SetState()
         {
+            var state = EventState.Unknown;
+            var currentStageLabel = "";
+            var nextStageLabel = "";
+
+            if (this.metaEventData is SingleMapMetaEvent)
+            {
+                currentStageLabel = this.metaEventData.MapName;
+            }
+            if (this.metaEventData is MultiMapMetaEvent)
+            {
+                currentStageLabel = this.metaEventData.Name;
+            }
+            
             if (this.CurrentStage.ID == MetaEventStageID.Inactive)
             {
-                this.State = EventState.Inactive;
-                this.Label = "";
+                state = EventState.Inactive;
             }
             else
             {
-                this.State = EventState.Active;
-                this.Label = ": " + this.CurrentStage.Name;
+                state = EventState.Active;
+                currentStageLabel += ": ";
+                if (this.metaEventData is SingleMapMetaEvent)
+                {
+                    currentStageLabel += this.CurrentStage.Name;
+                }
+                if (this.metaEventData is MultiMapMetaEvent)
+                {
+                    currentStageLabel += this.CurrentStage.MapName;
+                }
             }
+
+            if (this.NextStage.ID == MetaEventStageID.Inactive ||
+                this.metaEventData is SingleMapMetaEvent)
+            {
+                nextStageLabel = this.NextStage.Name;
+            }
+            else
+            {
+                nextStageLabel = this.NextStage.MapName;
+            }
+
+            this.State = state;
+            this.CurrentStageLabel = currentStageLabel;
+            this.NextStageLabel = nextStageLabel;
         }
 
         /// <summary>

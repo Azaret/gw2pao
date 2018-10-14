@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using GW2PAO.API.Constants;
+using GW2PAO.API.Data.Entities;
 using GW2PAO.API.Services.Interfaces;
 using GW2PAO.API.Util;
 using GW2PAO.Modules.Events.Interfaces;
@@ -143,8 +144,10 @@ namespace GW2PAO.Modules.Events
             this.UserData.PropertyChanged += UserData_PropertyChanged;
 
             // Initialize the WorldEvents collection
-            this.InitializeEvents();
+            this.InitializeTimeTables();
+            this.InitializeLocalizedEventNames();
             this.InitializeEventZoneNames();
+            this.InitializeEventModels();
             this.InitializeNotifications();
             logger.Info("Event Tracker Controller initialized");
         }
@@ -208,23 +211,61 @@ namespace GW2PAO.Modules.Events
         }
 
         /// <summary>
-        /// Initializes the collection of world boss events and meta events
+        /// Initializes the time tables
         /// </summary>
-        private void InitializeEvents()
+        private void InitializeTimeTables()
         {
             lock (refreshTimerLock)
             {
                 logger.Debug("Initializing local event data caches");
                 this.eventsService.LoadTables(this.UserData.UseAdjustedTimeTable);
+            }
+        }
 
+        /// <summary>
+        /// Initializes the localized names of events
+        /// </summary>
+        private void InitializeLocalizedEventNames()
+        {
+            lock (refreshTimerLock)
+            {
                 logger.Debug("Initializing World Boss events");
-                Threading.InvokeOnUI(() =>
+                Threading.BeginInvokeOnUI(() =>
                 {
                     foreach (var worldEvent in this.eventsService.WorldBossEventTimeTable.WorldEvents)
                     {
                         logger.Debug("Loading localized name for {0}", worldEvent.ID);
                         worldEvent.Name = this.eventsService.GetLocalizedName(worldEvent.ID);
+                    }
+                });
+                logger.Debug("Initializing Meta Events");
+                Threading.BeginInvokeOnUI(() =>
+                {
+                    foreach (var metaEvent in this.eventsService.MetaEventsTable.MetaEvents)
+                    {
+                        logger.Debug("Loading localized name for {0}", metaEvent.ID);
+                        metaEvent.Name = this.eventsService.GetLocalizedName(metaEvent.ID);
+                        foreach (var metaEventStage in metaEvent.Stages)
+                        {
+                            metaEventStage.Name = this.eventsService.GetLocalizedName(metaEventStage.ID);
+                        }
+                    }
+                });
+            }
+        }
 
+        /// <summary>
+        /// Initializes the collection of world boss events and meta events
+        /// </summary>
+        private void InitializeEventModels()
+        {
+            lock (refreshTimerLock)
+            {
+                logger.Debug("Initializing World Boss events");
+                Threading.InvokeOnUI(() =>
+                {
+                    foreach (var worldEvent in this.eventsService.WorldBossEventTimeTable.WorldEvents)
+                    {
                         logger.Debug("Initializing view model for {0}", worldEvent.ID);
                         this.WorldBossEvents.Add(new WorldBossEventViewModel(worldEvent, this.userData));
                     }
@@ -235,12 +276,6 @@ namespace GW2PAO.Modules.Events
                 {
                     foreach (var metaEvent in this.eventsService.MetaEventsTable.MetaEvents)
                     {
-                        logger.Debug("Loading localized stage names for {0}", metaEvent.ID);
-                        foreach (var stage in metaEvent.Stages)
-                        {
-                            stage.Name = this.eventsService.GetLocalizedName(stage.ID);
-                        }
-
                         logger.Debug("Initializing view models for {0}", metaEvent.ID);
                         this.MetaEvents.Add(new MetaEventViewModel(metaEvent, this.userData));
                     }
@@ -264,7 +299,7 @@ namespace GW2PAO.Modules.Events
                 });
             }
 
-            foreach (var metaEvent in this.MetaEvents)
+            foreach (var metaEvent in this.eventsService.MetaEventsTable.MetaEvents)
             {
                 logger.Debug("Loading localized zone location for {0}", metaEvent.MapID);
                 var name = this.zoneService.GetZoneName(metaEvent.MapID);
@@ -272,6 +307,14 @@ namespace GW2PAO.Modules.Events
                 {
                     metaEvent.MapName = name;
                 });
+                foreach (var metaEventStage in metaEvent.Stages)
+                {
+                    var stageName = this.zoneService.GetZoneName(metaEventStage.MapID);
+                    Threading.BeginInvokeOnUI(() =>
+                    {
+                        metaEventStage.MapName = stageName;
+                    });
+                }
             }
         }
 

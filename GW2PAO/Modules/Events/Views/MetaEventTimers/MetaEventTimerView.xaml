@@ -86,7 +86,7 @@
                                     HorizontalAlignment="Left"
                                     Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                     FontSize="13"
-                                    Text="{Binding Label}" />
+                                    Text="{Binding CurrentStageLabel}" />
 
             <StackPanel Orientation="Horizontal"
                         Grid.Row="0"
@@ -97,7 +97,7 @@
                                         VerticalAlignment="Center"
                                         Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                         FontSize="13"
-                                        Text="{Binding NextStage.Name}" />
+                                        Text="{Binding NextStageLabel}" />
                 <core:OutlinedTextBlock Margin="3,0,0,0"
                                         VerticalAlignment="Center"
                                         Fill="{Binding State, Converter={StaticResource StateConverter}}"

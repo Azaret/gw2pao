@@ -66,7 +66,7 @@ namespace GW2PAO.API.Data
             // Note: Names actually come from a localized names provider, but are left here for reference
             // in the xml file
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Dry Top",
                 ID = MetaEventID.DryTop,
@@ -79,7 +79,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Verdant Brink",
                 ID = MetaEventID.VerdantBrink,
@@ -93,7 +93,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Auric Basin",
                 ID = MetaEventID.AuricBasin,
@@ -108,7 +108,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Tangled Depths",
                 ID = MetaEventID.TangledDepths,
@@ -122,7 +122,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Dragon's Stand",
                 ID = MetaEventID.DragonsStand,
@@ -134,7 +134,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Lake Doric",
                 ID = MetaEventID.LakeDoric,
@@ -148,7 +148,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Crystal Oasis",
                 ID = MetaEventID.CrystalOasis,
@@ -161,7 +161,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Desert Highlands",
                 ID = MetaEventID.DesertHighlands,
@@ -174,7 +174,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Domain of Vabbi",
                 ID = MetaEventID.DomainOfVabbi,
@@ -187,7 +187,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Domain of Istan",
                 ID = MetaEventID.DomainOfIstan,
@@ -200,7 +200,7 @@ namespace GW2PAO.API.Data
                 }
             });
 
-            met.MetaEvents.Add(new MetaEvent()
+            met.MetaEvents.Add(new SingleMapMetaEvent()
             {
                 Name = "Jahai Bluffs",
                 ID = MetaEventID.JahaiBluffs,
