@@ -357,12 +357,12 @@ namespace GW2PAO.Modules.Events
                     {
                         this.UserData.NotificationSettings.Add(new EventNotificationSettings(metaEvent.EventId)
                         {
-                            EventName = metaEvent.MapName
+                            EventName = metaEvent.EventLabel
                         });
                     }
                     else
                     {
-                        ens.EventName = metaEvent.MapName;
+                        ens.EventName = metaEvent.EventLabel;
                     }
 
                     this.armedEventNotifications.Add(metaEvent.EventId, true);

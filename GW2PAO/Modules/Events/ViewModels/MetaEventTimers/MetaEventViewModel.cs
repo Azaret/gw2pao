@@ -24,8 +24,11 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         private EventState state;
         private MetaEvent metaEventData;
         private string mapName;
+        private string listLabel;
+        private string eventLabel;
         private string currentStageLabel;
         private string nextStageLabel;
+        private string hoverLabel;
         private MetaEventStage currentStage;
         private MetaEventStage nextStage;
         private TimeSpan prevUpdateTimeUtc;
@@ -61,6 +64,24 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         /// <summary>
         /// Display label used to aggregate map name and current stage name
         /// </summary>
+        public string ListLabel
+        {
+            get { return this.listLabel; }
+            set { if (SetProperty(ref this.listLabel, value)) this.RefreshVisibility(); }
+        }
+
+        /// <summary>
+        /// Display label used for the event
+        /// </summary>
+        public string EventLabel
+        {
+            get { return this.eventLabel; }
+            set { if (SetProperty(ref this.eventLabel, value)) this.RefreshVisibility(); }
+        }
+
+        /// <summary>
+        /// Current stage name
+        /// </summary>
         public string CurrentStageLabel
         {
             get { return this.currentStageLabel; }
@@ -68,12 +89,21 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         }
 
         /// <summary>
-        /// Display label used to aggregate map name and current stage name
+        /// Next stage name
         /// </summary>
         public string NextStageLabel
         {
             get { return this.nextStageLabel; }
             set { if (SetProperty(ref this.nextStageLabel, value)) this.RefreshVisibility(); }
+        }
+
+        /// <summary>
+        /// Hover label storing active or inactive keyword
+        /// </summary>
+        public string HoverLabel
+        {
+            get { return this.hoverLabel; }
+            set { if (SetProperty(ref this.hoverLabel, value)) this.RefreshVisibility(); }
         }
 
         /// <summary>
@@ -256,50 +286,53 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
 
         private void SetState()
         {
-            var state = EventState.Unknown;
+            var state = EventState.Active;
+            var listLabel = "";
+            var eventLabel = "";
             var currentStageLabel = "";
             var nextStageLabel = "";
-
+            var hoverLabel = Properties.Resources.ActiveFor;
+            
             if (this.metaEventData is SingleMapMetaEvent)
             {
-                currentStageLabel = this.metaEventData.MapName;
+                eventLabel = this.metaEventData.MapName;
+                currentStageLabel = this.CurrentStage.Name;
+                nextStageLabel = this.NextStage.Name;
             }
             if (this.metaEventData is MultiMapMetaEvent)
             {
-                currentStageLabel = this.metaEventData.Name;
-            }
-            
-            if (this.CurrentStage.ID == MetaEventStageID.Inactive)
-            {
-                state = EventState.Inactive;
-            }
-            else
-            {
-                state = EventState.Active;
-                currentStageLabel += ": ";
-                if (this.metaEventData is SingleMapMetaEvent)
-                {
-                    currentStageLabel += this.CurrentStage.Name;
-                }
-                if (this.metaEventData is MultiMapMetaEvent)
-                {
-                    currentStageLabel += this.CurrentStage.MapName;
-                }
-            }
-
-            if (this.NextStage.ID == MetaEventStageID.Inactive ||
-                this.metaEventData is SingleMapMetaEvent)
-            {
-                nextStageLabel = this.NextStage.Name;
-            }
-            else
-            {
+                eventLabel = this.metaEventData.Name;
+                currentStageLabel = this.CurrentStage.MapName;
                 nextStageLabel = this.NextStage.MapName;
             }
 
+            if (this.CurrentStage.ID == MetaEventStageID.Inactive)
+            {
+                state = EventState.Inactive;
+                currentStageLabel = "";
+                hoverLabel = Properties.Resources.InactiveFor;
+            }
+
+            if (!string.IsNullOrWhiteSpace(eventLabel))
+            {
+                listLabel = eventLabel;
+                if (!string.IsNullOrWhiteSpace(currentStageLabel))
+                {
+                    listLabel = string.Format(Properties.Resources.MetaEventLabel, eventLabel, currentStageLabel);
+                }
+            }
+
+            if (this.NextStage.ID == MetaEventStageID.Inactive)
+            {
+                nextStageLabel = "ends";
+            }
+
             this.State = state;
+            this.ListLabel = listLabel;
+            this.EventLabel = eventLabel;
             this.CurrentStageLabel = currentStageLabel;
             this.NextStageLabel = nextStageLabel;
+            this.HoverLabel = hoverLabel;
         }
 
         /// <summary>
@@ -307,7 +340,7 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         /// </summary>
         private void AddToHiddenEvents()
         {
-            logger.Debug("Adding \"{0}\" to hidden meta events", this.MapName);
+            logger.Debug("Adding \"{0}\" to hidden meta events", this.EventLabel);
             this.UserData.HiddenMetaEvents.Add(this.EventId);
         }
 
@@ -316,7 +349,7 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         /// </summary>
         private void RefreshVisibility()
         {
-            logger.Trace("Refreshing visibility of meta event \"{0}\"", this.MapName);
+            logger.Trace("Refreshing visibility of meta event \"{0}\"", this.EventLabel);
             if (this.UserData.HiddenMetaEvents.Any(id => id == this.EventId))
             {
                 this.IsVisible = false;

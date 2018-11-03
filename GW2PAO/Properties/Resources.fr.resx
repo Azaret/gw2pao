@@ -121,7 +121,7 @@
     <value>A propos</value>
   </data>
   <data name="ActiveFor" xml:space="preserve">
-    <value>depuis</value>
+    <value>Actif depuis</value>
     <comment>Example: "active for 00:10:07"</comment>
   </data>
   <data name="ActiveIn" xml:space="preserve">
@@ -1129,5 +1129,27 @@ Lorsqu'un objectif est capturé par un autre monde chez l'ennemi</value>
   </data>
   <data name="ZoneCompletionAssistant" xml:space="preserve">
     <value>Assistant d'exploration</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Remarques</value>
+  </data>
+  <data name="ShowTextChat" xml:space="preserve">
+    <value>Voir le texte chat</value>
+    <comment>For the teamspeak overlay</comment>
+  </data>
+  <data name="ShowVoiceChat" xml:space="preserve">
+    <value>Afficher Voice Chat</value>
+    <comment>For the teamspeak overlay</comment>
+  </data>
+  <data name="InactiveFor" xml:space="preserve">
+    <value>Inactif depuis</value>
+    <comment>Example: "active for 00:10:07"</comment>
+  </data>
+  <data name="MetaEventLabel" xml:space="preserve">
+    <value>{0}: {1}</value>
+    <comment>Example: Jahai's Bluff: Dangerous Prey</comment>
+  </data>
+  <data name="MetaEventInactiveLabel" xml:space="preserve">
+    <value>finit</value>
   </data>
 </root>

@@ -121,7 +121,7 @@
     <value>Über</value>
   </data>
   <data name="ActiveFor" xml:space="preserve">
-    <value>aktiv für</value>
+    <value>Aktiv für</value>
     <comment>Example: "active for 00:10:07"</comment>
   </data>
   <data name="ActiveIn" xml:space="preserve">
@@ -1128,5 +1128,25 @@ Gebietsabschluss-Assistent umschalten</value>
   </data>
   <data name="ZoneCompletionAssistant" xml:space="preserve">
     <value>Zonen-Komplettierungs-Assistent</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notizen</value>
+  </data>
+  <data name="ShowTextChat" xml:space="preserve">
+    <value>Zeigen Text-Chat</value>
+  </data>
+  <data name="ShowVoiceChat" xml:space="preserve">
+    <value>Anzeigen Voice Chat</value>
+  </data>
+  <data name="InactiveFor" xml:space="preserve">
+    <value>Inaktiv für</value>
+    <comment>Example: "active for 00:10:07"</comment>
+  </data>
+  <data name="MetaEventLabel" xml:space="preserve">
+    <value>{0}: {1}</value>
+    <comment>Example: Jahai's Bluff: Dangerous Prey</comment>
+  </data>
+  <data name="MetaEventInactiveLabel" xml:space="preserve">
+    <value>endet</value>
   </data>
 </root>

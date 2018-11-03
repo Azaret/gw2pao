@@ -79,7 +79,7 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to active in.
+        ///   Looks up a localized string similar to Active in.
         /// </summary>
         public static string ActiveIn {
             get {
@@ -1105,6 +1105,15 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Inactive for.
+        /// </summary>
+        public static string InactiveFor {
+            get {
+                return ResourceManager.GetString("InactiveFor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Include Location.
         /// </summary>
         public static string IncludeLocation {
@@ -1281,6 +1290,24 @@ namespace GW2PAO.Properties {
         public static string Maps {
             get {
                 return ResourceManager.GetString("Maps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ends.
+        /// </summary>
+        public static string MetaEventInactiveLabel {
+            get {
+                return ResourceManager.GetString("MetaEventInactiveLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}: {1}.
+        /// </summary>
+        public static string MetaEventLabel {
+            get {
+                return ResourceManager.GetString("MetaEventLabel", resourceCulture);
             }
         }
         

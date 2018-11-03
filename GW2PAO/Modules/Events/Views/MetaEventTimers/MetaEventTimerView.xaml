@@ -29,9 +29,8 @@
     
     <UserControl.ToolTip>
         <StackPanel Orientation="Vertical">
-            <TextBlock Text="{Binding CurrentStage.Name}" />
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{x:Static resx:Resources.ActiveFor}" />
+                <TextBlock Text="{Binding HoverLabel}" />
                 <TextBlock Text="{Binding TimeSinceStageStarted, Converter={StaticResource TimeConverter}}"
                            Margin="3,0,0,0"/>
             </StackPanel>
@@ -86,7 +85,7 @@
                                     HorizontalAlignment="Left"
                                     Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                     FontSize="13"
-                                    Text="{Binding CurrentStageLabel}" />
+                                    Text="{Binding ListLabel}" />
 
             <StackPanel Orientation="Horizontal"
                         Grid.Row="0"

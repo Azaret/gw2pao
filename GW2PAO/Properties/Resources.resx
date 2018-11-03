@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ActiveIn" xml:space="preserve">
-    <value>active in</value>
+    <value>Active in</value>
     <comment>Used to communicate when an in-game event will be active - example: "active in 08:00:01"</comment>
   </data>
   <data name="Add" xml:space="preserve">
@@ -1126,5 +1126,16 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
     <comment>Save a drawing</comment>
+  </data>
+  <data name="InactiveFor" xml:space="preserve">
+    <value>Inactive for</value>
+    <comment>Example: "inactive for 00:10:07"</comment>
+  </data>
+  <data name="MetaEventLabel" xml:space="preserve">
+    <value>{0}: {1}</value>
+    <comment>Example: Jahai's Bluff: Dangerous Prey</comment>
+  </data>
+  <data name="MetaEventInactiveLabel" xml:space="preserve">
+    <value>ends</value>
   </data>
 </root>
