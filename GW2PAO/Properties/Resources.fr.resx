@@ -575,7 +575,7 @@
     <value>Cartes</value>
   </data>
   <data name="MetaEventTimers" xml:space="preserve">
-    <value>Planning des méta-évènements HoT</value>
+    <value>Planning des méta-évènements</value>
   </data>
   <data name="Meters" xml:space="preserve">
     <value>Mètres</value>
@@ -606,7 +606,7 @@
     <value>Aucun résultat</value>
   </data>
   <data name="Notes" xml:space="preserve">
-    <value>Notes</value>
+    <value>Remarques</value>
   </data>
   <data name="NotificationsDuration" xml:space="preserve">
     <value>Durée des Notifications (sec)</value>
@@ -859,7 +859,7 @@
     <value>Montrer les tâches situées sur d'autres cartes</value>
   </data>
   <data name="ShowTextChat" xml:space="preserve">
-    <value>Montrer les messages écrits TS</value>
+    <value>Voir le texte chat</value>
     <comment>For the teamspeak overlay</comment>
   </data>
   <data name="ShowTimerValue" xml:space="preserve">
@@ -876,7 +876,7 @@
     <value>Montrer les Panoramas</value>
   </data>
   <data name="ShowVoiceChat" xml:space="preserve">
-    <value>Montrer le chat vocal TS</value>
+    <value>Afficher Voice Chat</value>
     <comment>For the teamspeak overlay</comment>
   </data>
   <data name="ShowWaypointCopyButtons" xml:space="preserve">
@@ -1129,17 +1129,6 @@ Lorsqu'un objectif est capturé par un autre monde chez l'ennemi</value>
   </data>
   <data name="ZoneCompletionAssistant" xml:space="preserve">
     <value>Assistant d'exploration</value>
-  </data>
-  <data name="Notes" xml:space="preserve">
-    <value>Remarques</value>
-  </data>
-  <data name="ShowTextChat" xml:space="preserve">
-    <value>Voir le texte chat</value>
-    <comment>For the teamspeak overlay</comment>
-  </data>
-  <data name="ShowVoiceChat" xml:space="preserve">
-    <value>Afficher Voice Chat</value>
-    <comment>For the teamspeak overlay</comment>
   </data>
   <data name="InactiveFor" xml:space="preserve">
     <value>Inactif depuis</value>
