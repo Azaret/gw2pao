@@ -634,7 +634,7 @@
     <value>Ouvrir le guide</value>
   </data>
   <data name="OpenMetaEventTimers" xml:space="preserve">
-    <value>Ouvrir le planning des méta-évènements HoT</value>
+    <value>Ouvrir le planning des méta-évènements</value>
   </data>
   <data name="OpenWikiPage" xml:space="preserve">
     <value>Ouvrir la page du Wiki</value>
@@ -965,7 +965,7 @@
     <comment>Hotkey label</comment>
   </data>
   <data name="ToggleMetaEventTimers" xml:space="preserve">
-    <value>Montrer/Masquer le planning des méta-évènements HoT</value>
+    <value>Montrer/Masquer le planning des méta-évènements</value>
     <comment>Hotkey label</comment>
   </data>
   <data name="ToggleNonInteractiveWindow" xml:space="preserve">
