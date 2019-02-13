@@ -212,7 +212,22 @@ namespace GW2PAO.API.Data
                     new MetaEventStage() { ID = MetaEventStageID.Inactive, Name = "", Duration = new SerializableTimespan(1, 30, 0) }
                 }
             });
-            
+
+            met.MetaEvents.Add(new SingleMapMetaEvent()
+            {
+                Name = "Thunderhead Peaks",
+                ID = MetaEventID.ThunderheadPeaks,
+                MapID = 1310,
+                StartOffset = new SerializableTimespan(0, 45, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { ID = MetaEventStageID.ThunderheadPeaks_TheOilFloes, Name = "The Oil Floes", Duration = new SerializableTimespan(0, 15, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.Inactive, Name = "", Duration = new SerializableTimespan(0, 45, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.ThunderheadPeaks_ThunderheadKeep, Name = "Thunderhead Keep", Duration = new SerializableTimespan(0, 20, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.Inactive, Name = "", Duration = new SerializableTimespan(0, 40, 0) }
+                }
+            });
+
             met.MetaEvents.Add(new MultiMapMetaEvent()
             {
                 Name = "Ley-Line Anomaly",
