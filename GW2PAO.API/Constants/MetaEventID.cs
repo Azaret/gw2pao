@@ -21,6 +21,8 @@ namespace GW2PAO.API.Constants
         public static readonly Guid JahaiBluffs = new Guid("A7DCAFB8-218E-4094-9B00-89BD31EA8602");
         public static readonly Guid ThunderheadPeaks = new Guid("AC642CC1-A9EB-4C75-86DE-CC9EE735BF10");
         public static readonly Guid LeyLineAnomaly = new Guid("644757FB-DE98-4798-B48E-3F273480DE49");
+        public static readonly Guid GrothmarValley = new Guid("3DA750BD-2925-43EC-AA3B-95BD2FA5A4F2");
+        public static readonly Guid BjoraMarches = new Guid("1DE15F17-2E44-4865-BE06-30834002D476");
     }
 
     public class MetaEventStageID
@@ -52,5 +54,10 @@ namespace GW2PAO.API.Constants
         public static readonly Guid LeyLineAnomaly_GendarranFields = new Guid("7418C0EB-BFFE-4899-871C-C63540502C8D");
         public static readonly Guid LeyLineAnomaly_TimberlineFalls = new Guid("E36B80D5-7373-4336-8954-86F886C9725D");
         public static readonly Guid LeyLineAnomaly_IronMarches = new Guid("6B0265A6-0085-4268-981E-1B91005E5995");
+        public static readonly Guid GrothmarValley_Effigy = new Guid("679548D1-DCB6-4C47-87B4-79CF08668478");
+        public static readonly Guid GrothmarValley_DoomloreShrine = new Guid("3E591D6F-BDAF-4436-B4A4-FC9DA6AD8675");
+        public static readonly Guid GrothmarValley_OozePits = new Guid("6C32D75F-2731-4DC3-8F4D-AC4F86C6D087");
+        public static readonly Guid GrothmarValley_MetalConcert = new Guid("C8B6223A-3B9C-47C9-979F-51AB450C92CE");
+        public static readonly Guid BjoraMarches_StormsOfWinter = new Guid("E7231CBC-2DFD-4105-BEAD-2484DE5CF2E4");
     }
 }
