@@ -42,9 +42,9 @@
 
     <UserControl.ToolTip>
         <StackPanel Orientation="Vertical">
-            <TextBlock Text="{Binding CurrentStage.Name}" />
+            <TextBlock Text="{Binding MetaEvent.CurrentStageLabel}" />
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{x:Static resx:Resources.ActiveFor}" />
+                <TextBlock Text="{Binding MetaEvent.HoverLabel}" />
                 <TextBlock Text="{Binding TimeSinceStageStarted, Converter={StaticResource TimeConverter}}"
                            Margin="3,0,0,0" />
             </StackPanel>
@@ -115,7 +115,7 @@
                                             HorizontalAlignment="Left" VerticalAlignment="Center"
                                             Fill="Orange"
                                             FontSize="14"
-                                            Text="{Binding EventName}" />
+                                            Text="{Binding MetaEvent.EventLabel}" />
                     
                     <!-- Close button -->
                     <Button Grid.Row="0" Grid.Column="1"
@@ -133,7 +133,7 @@
                                 Margin="2,0,0,0"
                                 Orientation="Horizontal">
                         <core:OutlinedTextBlock FontSize="12"
-                                                Text="{Binding NextStage.Name}" />
+                                                Text="{Binding MetaEvent.NextStageLabel}" />
                         <core:OutlinedTextBlock FontSize="12"
                                                 Margin="3,0,0,0"
                                                 Text="{x:Static resx:Resources.In}" />

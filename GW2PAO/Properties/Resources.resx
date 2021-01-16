@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ActiveIn" xml:space="preserve">
-    <value>active in</value>
+    <value>Active in</value>
     <comment>Used to communicate when an in-game event will be active - example: "active in 08:00:01"</comment>
   </data>
   <data name="Add" xml:space="preserve">
@@ -1093,5 +1093,49 @@
   </data>
   <data name="Notes" xml:space="preserve">
     <value>Notes</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="DeleteCategoryConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete all tasks in this category?</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Uncategorized</value>
+  </data>
+  <data name="YesDeleteAll" xml:space="preserve">
+    <value>Yes, Delete All</value>
+  </data>
+  <data name="EditCategory" xml:space="preserve">
+    <value>Edit Category</value>
+  </data>
+  <data name="VisibleCategories" xml:space="preserve">
+    <value>Visible Categories</value>
+  </data>
+  <data name="DeleteTasksConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete all of your tasks?</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+    <comment>Clear the current drawing</comment>
+  </data>
+  <data name="CopyCharTrail" xml:space="preserve">
+    <value>Copy Character Trail</value>
+    <comment>Copies the character's trail to the drawing</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+    <comment>Save a drawing</comment>
+  </data>
+  <data name="InactiveFor" xml:space="preserve">
+    <value>Inactive for</value>
+    <comment>Example: "inactive for 00:10:07"</comment>
+  </data>
+  <data name="MetaEventLabel" xml:space="preserve">
+    <value>{0}: {1}</value>
+    <comment>Example: Jahai's Bluff: Dangerous Prey</comment>
+  </data>
+  <data name="MetaEventInactiveLabel" xml:space="preserve">
+    <value>ends</value>
   </data>
 </root>

@@ -24,6 +24,11 @@ namespace GW2PAO.Modules.Events.ViewModels.EventNotification
 
         private MetaEventViewModel metaEvent;
 
+        public MetaEventViewModel MetaEvent
+        {
+            get { return this.metaEvent; }
+        }
+
         /// <summary>
         /// Next stage of the meta event
         /// </summary>
@@ -60,7 +65,7 @@ namespace GW2PAO.Modules.Events.ViewModels.EventNotification
         /// Default constructor
         /// </summary>
         public MetaEventNotificationViewModel(MetaEventViewModel metaEvent, ICollection<IEventNotification> visibleNotificationsCollection)
-            : base(metaEvent.EventId, metaEvent.MapName, visibleNotificationsCollection)
+            : base(metaEvent.EventId, metaEvent.EventLabel, visibleNotificationsCollection)
         {
             this.metaEvent = metaEvent;
             this.metaEvent.PropertyChanged += MetaEvent_PropertyChanged;

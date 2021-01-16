@@ -79,7 +79,7 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to active in.
+        ///   Looks up a localized string similar to Active in.
         /// </summary>
         public static string ActiveIn {
             get {
@@ -412,6 +412,15 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string Category {
+            get {
+                return ResourceManager.GetString("Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Center on Character.
         /// </summary>
         public static string CenterOnChar {
@@ -435,6 +444,15 @@ namespace GW2PAO.Properties {
         public static string ClaimedBy {
             get {
                 return ResourceManager.GetString("ClaimedBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string Clear {
+            get {
+                return ResourceManager.GetString("Clear", resourceCulture);
             }
         }
         
@@ -489,6 +507,15 @@ namespace GW2PAO.Properties {
         public static string Configure {
             get {
                 return ResourceManager.GetString("Configure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy Character Trail.
+        /// </summary>
+        public static string CopyCharTrail {
+            get {
+                return ResourceManager.GetString("CopyCharTrail", resourceCulture);
             }
         }
         
@@ -655,6 +682,24 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete all tasks in this category?.
+        /// </summary>
+        public static string DeleteCategoryConfirmation {
+            get {
+                return ResourceManager.GetString("DeleteCategoryConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete all of your tasks?.
+        /// </summary>
+        public static string DeleteTasksConfirmation {
+            get {
+                return ResourceManager.GetString("DeleteTasksConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
@@ -786,6 +831,15 @@ namespace GW2PAO.Properties {
         public static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Category.
+        /// </summary>
+        public static string EditCategory {
+            get {
+                return ResourceManager.GetString("EditCategory", resourceCulture);
             }
         }
         
@@ -1051,6 +1105,15 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Inactive for.
+        /// </summary>
+        public static string InactiveFor {
+            get {
+                return ResourceManager.GetString("InactiveFor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Include Location.
         /// </summary>
         public static string IncludeLocation {
@@ -1227,6 +1290,24 @@ namespace GW2PAO.Properties {
         public static string Maps {
             get {
                 return ResourceManager.GetString("Maps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ends.
+        /// </summary>
+        public static string MetaEventInactiveLabel {
+            get {
+                return ResourceManager.GetString("MetaEventInactiveLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}: {1}.
+        /// </summary>
+        public static string MetaEventLabel {
+            get {
+                return ResourceManager.GetString("MetaEventLabel", resourceCulture);
             }
         }
         
@@ -1704,6 +1785,15 @@ namespace GW2PAO.Properties {
         public static string SaleFee {
             get {
                 return ResourceManager.GetString("SaleFee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         
@@ -2365,6 +2455,15 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Uncategorized.
+        /// </summary>
+        public static string Uncategorized {
+            get {
+                return ResourceManager.GetString("Uncategorized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unknown.
         /// </summary>
         public static string Unknown {
@@ -2415,6 +2514,15 @@ namespace GW2PAO.Properties {
         public static string Vertical {
             get {
                 return ResourceManager.GetString("Vertical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visible Categories.
+        /// </summary>
+        public static string VisibleCategories {
+            get {
+                return ResourceManager.GetString("VisibleCategories", resourceCulture);
             }
         }
         
@@ -2623,6 +2731,15 @@ namespace GW2PAO.Properties {
         public static string WvWUnderAttackClipboardText {
             get {
                 return ResourceManager.GetString("WvWUnderAttackClipboardText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes, Delete All.
+        /// </summary>
+        public static string YesDeleteAll {
+            get {
+                return ResourceManager.GetString("YesDeleteAll", resourceCulture);
             }
         }
         

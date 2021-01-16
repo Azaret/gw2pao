@@ -25,11 +25,11 @@ namespace GW2PAO.Utility
         /// </summary>
         public static void CheckForUpdateAndNotify()
         {
-            Task.Factory.StartNew(() =>
+            Task.Factory.StartNew(async () =>
                 {
                     logger.Info("Checking for new version");
 
-                    Version latestVersion = GetLatestVersion();
+                    Version latestVersion = await GetLatestVersion();
 
                     // Get the assembly version and compare
                     Assembly assembly = Assembly.GetExecutingAssembly();
@@ -51,18 +51,25 @@ namespace GW2PAO.Utility
                 });
         }
 
+        private static Task<string> DownloadVersion()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(@"https://raw.githubusercontent.com/SamHurne/gw2pao/master/latest_version.txt");
+                return client.GetStringAsync("");
+            }
+        }
+
         /// <summary>
         /// Synchronous check to retrieve the version of the latest released of the software
         /// Based on http://www.hanselman.com/blog/HowToAutomaticallyNotifyTheUserThatItsTimeToUpgradeAWindowsApp.aspx
         /// </summary>
         /// <returns>The version of the latest release</returns>
-        private static Version GetLatestVersion()
+        private static async Task<Version> GetLatestVersion()
         {
-            var http = new HttpClient();
-            var request = http.GetStringAsync(new Uri("https://raw.githubusercontent.com/SamHurne/gw2pao/master/latest_version.txt"));
-            if (request.Wait(500)) // Should be pretty quick
+            var versionString = await DownloadVersion();
+            if (!string.IsNullOrWhiteSpace(versionString))
             {
-                string versionString = request.Result;
                 return new Version(versionString);
             }
             else
