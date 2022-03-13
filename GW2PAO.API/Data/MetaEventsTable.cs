@@ -70,7 +70,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Dry Top",
                 ID = MetaEventID.DryTop,
-                MapID = 988,
+                MapID = MapID.DryTop,
                 StartOffset = new SerializableTimespan(0, 0, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -83,7 +83,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Verdant Brink",
                 ID = MetaEventID.VerdantBrink,
-                MapID = 1052,
+                MapID = MapID.VerdantBrink,
                 StartOffset = new SerializableTimespan(0, 10, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -97,7 +97,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Auric Basin",
                 ID = MetaEventID.AuricBasin,
-                MapID = 1043,
+                MapID = MapID.AuricBasin,
                 StartOffset = new SerializableTimespan(0, 45, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -112,7 +112,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Tangled Depths",
                 ID = MetaEventID.TangledDepths,
-                MapID = 1045,
+                MapID = MapID.TangledDepths,
                 StartOffset = new SerializableTimespan(0, 25, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -126,7 +126,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Dragon's Stand",
                 ID = MetaEventID.DragonsStand,
-                MapID = 1041,
+                MapID = MapID.DragonsStand,
                 StartOffset = new SerializableTimespan(1, 30, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -138,7 +138,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Lake Doric",
                 ID = MetaEventID.LakeDoric,
-                MapID = 1185,
+                MapID = MapID.LakeDoric,
                 StartOffset = new SerializableTimespan(0, 30, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -152,7 +152,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Crystal Oasis",
                 ID = MetaEventID.CrystalOasis,
-                MapID = 1210,
+                MapID = MapID.CrystalOasis,
                 StartOffset = new SerializableTimespan(0, 5, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -165,7 +165,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Desert Highlands",
                 ID = MetaEventID.DesertHighlands,
-                MapID = 1211,
+                MapID = MapID.DesertHighlands,
                 StartOffset = new SerializableTimespan(1, 0, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -178,7 +178,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Domain of Vabbi",
                 ID = MetaEventID.DomainOfVabbi,
-                MapID = 1248,
+                MapID = MapID.DomainOfVabbi,
                 StartOffset = new SerializableTimespan(0, 0, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -191,7 +191,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Domain of Istan",
                 ID = MetaEventID.DomainOfIstan,
-                MapID = 1263,
+                MapID = MapID.DomainOfIstan,
                 StartOffset = new SerializableTimespan(1, 45, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -204,7 +204,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Jahai Bluffs",
                 ID = MetaEventID.JahaiBluffs,
-                MapID = 1301,
+                MapID = MapID.JahaiBluffs,
                 StartOffset = new SerializableTimespan(1, 0, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -217,7 +217,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Thunderhead Peaks",
                 ID = MetaEventID.ThunderheadPeaks,
-                MapID = 1310,
+                MapID = MapID.ThunderheadPeaks,
                 StartOffset = new SerializableTimespan(0, 45, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -235,30 +235,30 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(0, 20, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { MapID = 29, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_TimberlineFalls, Name = "Timberline Falls"},
-                    new MetaEventStage() { MapID = 25, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 25, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_IronMarches, Name = "Iron Marches"},
-                    new MetaEventStage() { MapID = 24, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 24, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_GendarranFields, Name = "Gendarran Fields"},
-                    new MetaEventStage() { MapID = 29, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 29, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_TimberlineFalls, Name = "Timberline Falls"},
-                    new MetaEventStage() { MapID = 25, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 25, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_IronMarches, Name = "Iron Marches"},
-                    new MetaEventStage() { MapID = 24, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 24, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_GendarranFields, Name = "Gendarran Fields"},
-                    new MetaEventStage() { MapID = 29, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 29, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_TimberlineFalls, Name = "Timberline Falls"},
-                    new MetaEventStage() { MapID = 25, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 25, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_IronMarches, Name = "Iron Marches"},
-                    new MetaEventStage() { MapID = 24, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 24, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_GendarranFields, Name = "Gendarran Fields"},
-                    new MetaEventStage() { MapID = 29, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 29, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_TimberlineFalls, Name = "Timberline Falls"},
-                    new MetaEventStage() { MapID = 25, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 25, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_IronMarches, Name = "Iron Marches"},
-                    new MetaEventStage() { MapID = 24, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
-                    new MetaEventStage() { MapID = 24, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_GendarranFields, Name = "Gendarran Fields"},
-                    new MetaEventStage() { MapID = 29, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.TimberlineFalls, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_TimberlineFalls, Name = "Timberline Falls"},
+                    new MetaEventStage() { MapID = MapID.IronMarches, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.IronMarches, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_IronMarches, Name = "Iron Marches"},
+                    new MetaEventStage() { MapID = MapID.GendarranFields, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.GendarranFields, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_GendarranFields, Name = "Gendarran Fields"},
+                    new MetaEventStage() { MapID = MapID.TimberlineFalls, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.TimberlineFalls, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_TimberlineFalls, Name = "Timberline Falls"},
+                    new MetaEventStage() { MapID = MapID.IronMarches, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.IronMarches, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_IronMarches, Name = "Iron Marches"},
+                    new MetaEventStage() { MapID = MapID.GendarranFields, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.GendarranFields, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_GendarranFields, Name = "Gendarran Fields"},
+                    new MetaEventStage() { MapID = MapID.TimberlineFalls, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.TimberlineFalls, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_TimberlineFalls, Name = "Timberline Falls"},
+                    new MetaEventStage() { MapID = MapID.IronMarches, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.IronMarches, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_IronMarches, Name = "Iron Marches"},
+                    new MetaEventStage() { MapID = MapID.GendarranFields, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.GendarranFields, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_GendarranFields, Name = "Gendarran Fields"},
+                    new MetaEventStage() { MapID = MapID.TimberlineFalls, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.TimberlineFalls, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_TimberlineFalls, Name = "Timberline Falls"},
+                    new MetaEventStage() { MapID = MapID.IronMarches, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.IronMarches, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_IronMarches, Name = "Iron Marches"},
+                    new MetaEventStage() { MapID = MapID.GendarranFields, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { MapID = MapID.GendarranFields, Duration = new SerializableTimespan(0, 15, 0), ID = MetaEventStageID.LeyLineAnomaly_GendarranFields, Name = "Gendarran Fields"},
+                    new MetaEventStage() { MapID = MapID.TimberlineFalls, Duration = new SerializableTimespan(1, 45, 0), ID = MetaEventStageID.Inactive, Name = "" },
                 }
             });
 
@@ -266,7 +266,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Grothmar Valley",
                 ID = MetaEventID.GrothmarValley,
-                MapID = 1330,
+                MapID = MapID.GrothmarValley,
                 StartOffset = new SerializableTimespan(0, 10, 0),
                 Stages = new List<MetaEventStage>()
                 {
@@ -285,7 +285,7 @@ namespace GW2PAO.API.Data
             {
                 Name = "Bjora Marches",
                 ID = MetaEventID.BjoraMarches,
-                MapID = 1343,
+                MapID = MapID.BjoraMarches,
                 StartOffset = new SerializableTimespan(1, 35, 0),
                 Stages = new List<MetaEventStage>()
                 {

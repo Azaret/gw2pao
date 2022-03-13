@@ -222,6 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\DungeonID.cs" />
+    <Compile Include="Constants\MapID.cs" />
     <Compile Include="Constants\MetaEventID.cs" />
     <Compile Include="Constants\Paths.cs" />
     <Compile Include="Constants\WorldBossID.cs" />
