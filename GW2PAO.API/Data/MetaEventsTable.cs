@@ -294,6 +294,59 @@ namespace GW2PAO.API.Data
                 }
             });
 
+            met.MetaEvents.Add(new SingleMapMetaEvent() {
+                Name = "Seitung Province",
+                ID = MetaEventID.SeitungProvince,
+                MapID = MapID.SeitungProvince,
+                StartOffset = new SerializableTimespan(1, 30, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { Duration = new SerializableTimespan(0, 30, 0), ID = MetaEventStageID.SeitungProvince_AetherbladeAssault, Name = "Aetherblade Assault" },
+                    new MetaEventStage() { Duration = new SerializableTimespan(1, 30, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                }
+            });
+
+            met.MetaEvents.Add(new SingleMapMetaEvent()
+            {
+                Name = "New Kaineng City",
+                ID = MetaEventID.NewKainengCity,
+                MapID = MapID.NewKainengCity,
+                StartOffset = new SerializableTimespan(0, 0, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { Duration = new SerializableTimespan(0, 40, 0), ID = MetaEventStageID.NewKainengCity_KainengBlackout, Name = "Kaineng Blackout" },
+                    new MetaEventStage() { Duration = new SerializableTimespan(1, 20, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                }
+            });
+
+            met.MetaEvents.Add(new SingleMapMetaEvent()
+            {
+                Name = "The Echovald Wilds",
+                ID = MetaEventID.TheEchovaldWilds,
+                MapID = MapID.TheEchowaldWilds,
+                StartOffset = new SerializableTimespan(0, 30, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { Duration = new SerializableTimespan(0, 35, 0), ID = MetaEventStageID.TheEchovaldWilds_GangWar, Name = "Gang War" },
+                    new MetaEventStage() { Duration = new SerializableTimespan(0, 35, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                    new MetaEventStage() { Duration = new SerializableTimespan(0, 20, 0), ID = MetaEventStageID.TheEchovaldWilds_Aspenwood, Name = "Aspenwood" },
+                    new MetaEventStage() { Duration = new SerializableTimespan(0, 30, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                }
+            });
+
+            met.MetaEvents.Add(new SingleMapMetaEvent()
+            {
+                Name = "Dragon's End",
+                ID = MetaEventID.DragonsEnd,
+                MapID = MapID.DragonsEnd,
+                StartOffset = new SerializableTimespan(1, 0, 0),
+                Stages = new List<MetaEventStage>()
+                {
+                    new MetaEventStage() { Duration = new SerializableTimespan(1, 0, 0), ID = MetaEventStageID.DragonsEnd_JadeSeaBattle, Name = "The Battle for the Jade Sea" },
+                    new MetaEventStage() { Duration = new SerializableTimespan(1, 0, 0), ID = MetaEventStageID.Inactive, Name = "" },
+                }
+            });
+
             XmlSerializer serializer = new XmlSerializer(typeof(MetaEventsTable));
             TextWriter textWriter = new StreamWriter(MetaEventsTable.Filename);
             serializer.Serialize(textWriter, met);

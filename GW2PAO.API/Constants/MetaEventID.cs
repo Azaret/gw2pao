@@ -23,6 +23,10 @@ namespace GW2PAO.API.Constants
         public static readonly Guid LeyLineAnomaly = new Guid("644757FB-DE98-4798-B48E-3F273480DE49");
         public static readonly Guid GrothmarValley = new Guid("3DA750BD-2925-43EC-AA3B-95BD2FA5A4F2");
         public static readonly Guid BjoraMarches = new Guid("1DE15F17-2E44-4865-BE06-30834002D476");
+        public static readonly Guid SeitungProvince = new Guid("D6C45872-32DC-4A96-91C8-4857C9ACA0D9");
+        public static readonly Guid NewKainengCity = new Guid("2F24B8B7-BFBD-4917-9144-ED7F93D5A2AC");
+        public static readonly Guid TheEchovaldWilds = new Guid("37F3C7DB-5360-4C78-8FF8-991A4FD81E24");
+        public static readonly Guid DragonsEnd = new Guid("58C8BB69-8E93-43D5-A045-4FC4F8C273F1");
     }
 
     public class MetaEventStageID
@@ -59,5 +63,10 @@ namespace GW2PAO.API.Constants
         public static readonly Guid GrothmarValley_OozePits = new Guid("6C32D75F-2731-4DC3-8F4D-AC4F86C6D087");
         public static readonly Guid GrothmarValley_MetalConcert = new Guid("C8B6223A-3B9C-47C9-979F-51AB450C92CE");
         public static readonly Guid BjoraMarches_StormsOfWinter = new Guid("E7231CBC-2DFD-4105-BEAD-2484DE5CF2E4");
+        public static readonly Guid SeitungProvince_AetherbladeAssault = new Guid("72214845-DD5A-4B37-B6CB-CD218E94D209");
+        public static readonly Guid NewKainengCity_KainengBlackout = new Guid("AE204BBC-152A-460A-80A6-5F1BF4660BA8");
+        public static readonly Guid TheEchovaldWilds_GangWar = new Guid("A14D1440-4213-41CA-8ECD-BA9D5A440D7F");
+        public static readonly Guid TheEchovaldWilds_Aspenwood = new Guid("5EC6F864-92BC-4E27-9424-E5F86F560B0D");
+        public static readonly Guid DragonsEnd_JadeSeaBattle = new Guid("498A087D-FDDF-4825-9FD4-91964F75A07B");
     }
 }
