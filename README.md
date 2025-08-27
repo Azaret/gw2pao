@@ -4,6 +4,24 @@ A stand-alone .NET/WPF informational overlay utility package for Guild Wars 2.
 
 GitHub Pages Site: http://samhurne.github.io/gw2pao/
 
+# In the interim developments
+
+While Sam Hurne is not maintaining PAO, I took time adding the latest GW2 Content to PAO. I'm not willing to make big
+improvement over PAO, merely maintaining the content part up to date and keeping it stable, so I can myself enjoy it
+like you while playing Guild Wars 2. If there is some meta events or world boss missing, you can let me know, as well
+as missing translations. Here's what is changing here with Sam's latest update:
+
+- Game Content:
+    - Ley-Line anomalies
+    - Living World Season 3: Lake Doric meta events
+    - Path of Fire: Crystal Oasis, Desert Highlands, Domain of Vabbi meta events
+    - Living World Season 4: Domain of Istan, Jahai Bluffs meta events
+- PAO changes:
+    - Larger event window.
+    - Map Meta state. HoT and LW3 meta are continuous, while since PoF meta events are not anymore, therefore the Event window now show if an Map has active meta event or not.
+    - Multi-map meta events. PAO ties a meta events chain to a single map, but Ley-Line anomalies meta is running across multiple maps.
+    
+
 ### **NOTICE:** Development is now on HOLD. I have moved on from this project for now, although I may return to it in the future.
 
 # Features

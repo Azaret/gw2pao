@@ -135,7 +135,17 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_TheOilFloes,     Name = "The Oil Floes" },
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_ThunderheadKeep, Name = "Thunderhead Keep" },
                 new MetaEventStageName() { ID = MetaEventStageID.Inactive,                         Name = "ends" },
-                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                        Name = "Ley-Line Anomaly" }
+                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                        Name = "Ley-Line Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_Effigy,            Name = "Effigy" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_DoomloreShrine,    Name = "Doomlore Shrine" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_OozePits,          Name = "Ooze Pits" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_MetalConcert,      Name = "Metal Concert" },
+                new MetaEventStageName() { ID = MetaEventStageID.BjoraMarches_StormsOfWinter,      Name = "Storms of Winter" },
+                new MetaEventStageName() { ID = MetaEventStageID.SeitungProvince_AetherbladeAssault, Name = "Aetherblade Assault" },
+                new MetaEventStageName() { ID = MetaEventStageID.NewKainengCity_KainengBlackout, Name = "Kaineng Blackout" },
+                new MetaEventStageName() { ID = MetaEventStageID.TheEchovaldWilds_GangWar, Name = "Gang War" },
+                new MetaEventStageName() { ID = MetaEventStageID.TheEchovaldWilds_Aspenwood, Name = "Aspenwood" },
+                new MetaEventStageName() { ID = MetaEventStageID.DragonsEnd_JadeSeaBattle, Name = "The Battle for the Jade Sea" }
             };
 
             // Spanish
@@ -165,7 +175,12 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_TheOilFloes,     Name = "The Oil Floes" },
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_ThunderheadKeep, Name = "Thunderhead Keep" },
                 new MetaEventStageName() { ID = MetaEventStageID.Inactive,                         Name = "ends" },
-                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                        Name = "Ley-Line Anomaly" }
+                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                        Name = "Ley-Line Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_Effigy,            Name = "Effigy" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_DoomloreShrine,    Name = "Doomlore Shrine" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_OozePits,          Name = "Ooze Pits" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_MetalConcert,      Name = "Metal Concert" },
+                new MetaEventStageName() { ID = MetaEventStageID.BjoraMarches_StormsOfWinter,      Name = "Storms of Winter" }
             };
 
             // French
@@ -195,7 +210,12 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_TheOilFloes,     Name = "The Oil Floes" },
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_ThunderheadKeep, Name = "Thunderhead Keep" },
                 new MetaEventStageName() { ID = MetaEventStageID.Inactive,                         Name = "ends" },
-                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                        Name = "Ley-Line Anomaly" }
+                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                        Name = "Ley-Line Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_Effigy,            Name = "Effigy" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_DoomloreShrine,    Name = "Doomlore Shrine" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_OozePits,          Name = "Ooze Pits" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_MetalConcert,      Name = "Metal Concert" },
+                new MetaEventStageName() { ID = MetaEventStageID.BjoraMarches_StormsOfWinter,      Name = "Storms of Winter" }
             };
 
             // German
@@ -225,7 +245,12 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_TheOilFloes,     Name = "The Oil Floes" },
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_ThunderheadKeep, Name = "Thunderhead Keep" },
                 new MetaEventStageName() { ID = MetaEventStageID.Inactive,                         Name = "ends" },
-                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                        Name = "Ley-Line Anomaly" }
+                new MetaEventStageName() { ID = MetaEventID.LeyLineAnomaly,                        Name = "Ley-Line Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_Effigy,            Name = "Effigy" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_DoomloreShrine,    Name = "Doomlore Shrine" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_OozePits,          Name = "Ooze Pits" },
+                new MetaEventStageName() { ID = MetaEventStageID.GrothmarValley_MetalConcert,      Name = "Metal Concert" },
+                new MetaEventStageName() { ID = MetaEventStageID.BjoraMarches_StormsOfWinter,      Name = "Storms of Winter" }
             };
 
             Serialization.SerializeToXml(english, this.GetFilePath("en"));
